@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GPTGRIDX – AI Chatbot Plans</title>
+  <title>GPTGRIDX – Smart AI Chatbot Plans</title>
   <style>
     :root {
-      --bg: #0d1117;
-      --text: #fff;
-      --card: #1c2128;
-      --accent: #58a6ff;
-      --border: #30363d;
-      --footer: #161b22;
+      --bg: #e7edf3;
+      --text: #1e293b;
+      --card: #ffffff;
+      --accent: #f59e0b;
+      --border: #cbd5e1;
+      --footer: #dbe4eb;
+      --button: #10b981;
     }
-    [data-theme="light"] {
-      --bg: #ffffff;
-      --text: #000000;
-      --card: #f4f4f4;
-      --accent: #0056b3;
-      --border: #cccccc;
-      --footer: #eeeeee;
+    [data-theme="dark"] {
+      --bg: #1e293b;
+      --text: #f1f5f9;
+      --card: #0f172a;
+      --accent: #facc15;
+      --border: #334155;
+      --footer: #0f172a;
+      --button: #22d3ee;
     }
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -27,22 +29,23 @@
       color: var(--text);
       margin: 0;
       padding: 0;
-      transition: background 0.4s ease, color 0.4s ease;
+      transition: all 0.4s ease;
     }
     header {
       text-align: center;
-      padding: 50px 20px 20px;
+      padding: 50px 20px;
       background: var(--footer);
       border-bottom: 2px solid var(--border);
       position: relative;
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       color: var(--accent);
+      margin-bottom: 10px;
     }
     .subheading {
-      font-size: 1.1rem;
-      margin-bottom: 30px;
+      font-size: 1.2rem;
+      color: var(--text);
     }
     .toggle-theme {
       position: absolute;
@@ -51,38 +54,53 @@
       background: none;
       color: var(--accent);
       border: 2px solid var(--accent);
-      padding: 5px 10px;
-      border-radius: 5px;
+      padding: 6px 12px;
+      border-radius: 8px;
       cursor: pointer;
       font-weight: bold;
     }
-    .plans {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      padding: 40px;
+    .slogan {
+      font-size: 1rem;
+      text-align: center;
+      margin-top: 10px;
+      color: var(--text);
+    }
+    .section {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 80px 60px;
+      flex-wrap: wrap;
+    }
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+      background: #dce5ec;
     }
     .card {
       background: var(--card);
+      color: var(--text);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: background 0.4s ease;
+      border-radius: 16px;
+      padding: 25px;
+      width: 340px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
     }
     .card h2 {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
     }
     .price {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin: 10px 0;
+      font-size: 1.8rem;
+      color: var(--accent);
+      margin-bottom: 10px;
     }
     .features {
-      font-size: 0.95rem;
       list-style: none;
       padding: 0;
       margin: 10px 0;
@@ -90,23 +108,43 @@
     .features li {
       margin-bottom: 8px;
     }
-    .btn {
-      background: var(--accent);
-      color: var(--bg);
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      text-align: center;
+    .text-block {
+      max-width: 500px;
+      padding: 20px;
+      border-radius: 16px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .text-block:hover {
+      transform: scale(1.04);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      background-color: rgba(255,255,255,0.5);
+    }
+    .text-block h3 {
+      font-size: 1.6rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .text-block p {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .demo-btn {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: var(--button);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
       font-weight: bold;
       text-decoration: none;
-      margin-top: 10px;
+      transition: background 0.3s ease;
     }
-    .btn:hover {
-      opacity: 0.9;
+    .demo-btn:hover {
+      background-color: #059669;
     }
     footer {
       text-align: center;
-      padding: 30px 10px;
+      padding: 30px;
       background: var(--footer);
       border-top: 2px solid var(--border);
       font-size: 0.9rem;
@@ -114,64 +152,81 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>GPTGRIDX Chatbot Plans</h1>
-    <p class="subheading">Custom AI bots for businesses of every size. Choose your tier and launch your assistant today.</p>
+<header>
+    <h1>🚀 GPTGRIDX Chatbot Plans</h1>
+    <p class="subheading">AI Assistants that Convert. Deploy Smarter. Earn Faster.</p>
     <button class="toggle-theme" onclick="toggleTheme()">☀️ Toggle Theme</button>
+    <p class="slogan">💡 Tailored solutions for every brand. No fluff, just AI that works.</p>
   </header>
 
-  <section class="plans">
+  <section class="section">
+    <div class="text-block">
+      <h3>Start Simple, Launch Fast</h3>
+      <p>The Basic Plan is perfect for startups, creators, and individual brands who want a chatbot that can instantly greet and help their site visitors. It includes a clean, mobile-friendly UI and preset logic designed to handle FAQs and greet users without any CRM or integration setup needed. It’s also the fastest bot to deploy, with a delivery time of 2-3 days.</p>
+    </div>
     <div class="card">
-      <h2>Basic</h2>
+      <h2>💼 Basic</h2>
       <div class="price">$799</div>
       <ul class="features">
         <li>🤖 GPT-3.5 Bot</li>
-        <li>✅ Branded UI</li>
-        <li>❌ No PDF Training</li>
-        <li>❌ No CRM or lead capture</li>
-        <li>✅ 1 FAQ Button</li>
+        <li>🎨 Branded UI</li>
+        <li>🧾 No PDF Training</li>
+        <li>🚫 No CRM or lead capture</li>
+        <li>🔘 1 FAQ Button</li>
         <li>📱 Mobile Friendly</li>
-        <li>🕐 2-3 Day Delivery</li>
+        <li>⏱️ 2-3 Day Delivery</li>
       </ul>
-      <a href="https://gptgridx-basic.onrender.com/" class="btn">Try Demo</a>
+      <a href="https://gptgridx-basic.onrender.com/" class="demo-btn">🚀 Try Demo</a>
     </div>
+  </section>
 
+  <section class="section">
+    <div class="text-block">
+      <h3>Upgrade to Smarter AI</h3>
+      <p>The Standard Plan gives you upgraded intelligence with GPT-4 and the ability to respond from PDFs. It's ideal for educators, agencies, and solo creators needing a more dynamic and responsive assistant.</p>
+    </div>
     <div class="card">
-      <h2>Standard</h2>
+      <h2>⚙️ Standard</h2>
       <div class="price">$2,200</div>
       <ul class="features">
         <li>🤖 GPT-4 / 3.5 Bot</li>
-        <li>✅ Branded UI</li>
+        <li>🎨 Branded UI</li>
         <li>📚 Up to 3 PDF Documents</li>
-        <li>❌ CRM or lead capture</li>
-        <li>✅ 2 FAQ Buttons</li>
+        <li>🧾 No CRM or lead capture</li>
+        <li>🔘 2 FAQ Buttons</li>
         <li>📱 Mobile Friendly</li>
-        <li>🕐 5 Day Delivery</li>
+        <li>⏱️ 5 Day Delivery</li>
       </ul>
-      <a href="https://gptgridx-standard.onrender.com/" class="btn">Try Demo</a>
+      <a href="https://gptgridx-standard.onrender.com/" class="demo-btn">🚀 Try Demo</a>
     </div>
+  </section>
 
+  <section class="section">
+    <div class="text-block">
+      <h3>Enterprise-Ready AI</h3>
+      <p>The Premium Plan is a full-blown intelligent assistant for growing companies. It includes GPT-4 power, support for up to 10 PDFs using Retrieval Augmented Generation (RAG), lead collection, Google Sheets, Notion, and CRM integration. You also get analytics, a dashboard, subdomain hosting, and hands-on support. Ideal for digital agencies, SaaS platforms, service providers, and client-based businesses.</p>
+    </div>
     <div class="card">
-      <h2>Premium</h2>
+      <h2>👑 Premium</h2>
       <div class="price">$4,100</div>
       <ul class="features">
         <li>🤖 GPT-4 Bot</li>
-        <li>✅ Branded UI + Analytics</li>
-        <li>📚 Up to 10 PDFs (RAG)</li>
-        <li>✅ CRM, Google Sheets, Notion</li>
-        <li>✅ 3+ FAQ Buttons</li>
-        <li>✅ Subdomain Hosting</li>
-        <li>📱 Mobile Friendly</li>
-        <li>🛠️ 7-Day Support</li>
+        <li>📊 UI + Analytics + Admin Panel</li>
+        <li>📚 10 PDFs (RAG Ready)</li>
+        <li>✅ CRM, Sheets, Notion Integration</li>
+        <li>🔘 3+ FAQ Buttons</li>
+        <li>🔗 Subdomain Hosting</li>
+        <li>📱 Mobile Optimized</li>
+        <li>🛠️ 7-Day Live Support</li>
         <li>🎥 Loom Setup + PDF Guide</li>
       </ul>
-      <a href="https://gptgridx-premium.onrender.com/" class="btn">Try Demo</a>
+      <a href="https://gptgridx-premium.onrender.com/" class="demo-btn">🚀 Try Demo</a>
     </div>
   </section>
 
   <footer>
-    Contact: <a href="mailto:gptgridx@gmail.com" style="color:var(--accent)">gptgridx@gmail.com</a><br>
-    All bots are custom-built, secure, and fully owned by you.
+    📩 Contact: <a href="mailto:gptgridx@gmail.com" style="color:var(--accent)">gptgridx@gmail.com</a><br>
+    ✨ All bots are custom-built, secure & fully owned by you.
   </footer>
 
   <script>
