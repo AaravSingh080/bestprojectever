@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPTGRIDX Chatbot Plans</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #e3ebf1;
+      color: #222;
+    }
+    .container {
+      width: 90%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .header h1 {
+      font-size: 2.5rem;
+      color: #f39c12;
+    }
+    .header p {
+      margin: 10px 0;
+      color: #444;
+    }
+    .plan-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      margin: 80px 0;
+      flex-wrap: wrap;
+    }
+    .plan-section.reverse {
+      flex-direction: row-reverse;
+    }
+    .plan-box, .description-box {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      width: 46%;
+      transition: transform 0.3s ease;
+    }
+    .plan-box:hover, .description-box:hover {
+      transform: translateY(-6px);
+    }
+    .plan-box h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    .price {
+      color: #f39c12;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .features {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+    .features li {
+      margin-bottom: 6px;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #2ecc71;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #27ae60;
+    }
+    .description-box h3 {
+      color: #f39c12;
+      margin-top: 0;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    @media(max-width: 900px) {
+      .plan-section {
+        flex-direction: column;
+        gap: 30px;
+      }
+      .plan-box, .description-box {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🚀 GPTGRIDX Chatbot Plans</h1>
+      <p>AI Assistants that Convert. Deploy Smarter. Earn Faster.</p>
+      <p>🔎 Tailored solutions for every brand. No fluff, just AI that works.</p>
+    </div>
+
+    <div class="plan-section">
+      <div class="plan-box">
+        <h2>📟 Basic</h2>
+        <div class="price">$799</div>
+        <ul class="features">
+          <li>🤖 GPT-3.5 Bot</li>
+          <li>✅ Branded UI</li>
+          <li>❌ No PDF Training</li>
+          <li>❌ No CRM or lead capture</li>
+          <li>❓ 1 FAQ Button</li>
+          <li>📱 Mobile Friendly</li>
+          <li>⏱️ 2-3 Day Delivery</li>
+        </ul>
+        <a href="https://gptgridx-basic.onrender.com/" class="btn">🚀 Try Demo</a>
+      </div>
+      <div class="description-box">
+        <h3>Start Simple, Launch Fast</h3>
+        <p>The Basic Plan is perfect for startups, creators, and individual brands who want a chatbot that can instantly greet and help their site visitors. It includes a clean, mobile-friendly UI and preset logic designed to handle FAQs and greet users without any CRM or integration setup needed. It’s also the fastest bot to deploy, with a delivery time of 2–3 days.</p>
+      </div>
+    </div>
+
+    <div class="plan-section reverse">
+      <div class="plan-box">
+        <h2>⚙️ Standard</h2>
+        <div class="price">$2,200</div>
+        <ul class="features">
+          <li>🤖 GPT-4 & GPT-3.5 Bot</li>
+          <li>✅ Branded UI</li>
+          <li>📄 Up to 3 PDF Documents</li>
+          <li>❌ No CRM or lead capture</li>
+          <li>❓ 2 FAQ Buttons</li>
+          <li>📱 Mobile Friendly</li>
+          <li>⏱️ 5 Day Delivery</li>
+        </ul>
+        <a href="https://gptgridx-standard.onrender.com/" class="btn">🚀 Try Demo</a>
+      </div>
+      <div class="description-box">
+        <h3>Upgrade to Smarter AI</h3>
+        <p>The Standard Plan gives you upgraded intelligence with GPT-4 and the ability to respond from PDFs. It’s ideal for educators, agencies, and solo creators needing a more dynamic and responsive assistant.</p>
+      </div>
+    </div>
+
+    <div class="plan-section">
+      <div class="plan-box">
+        <h2>💼 Premium</h2>
+        <div class="price">$4,100</div>
+        <ul class="features">
+          <li>🤖 GPT-4 Bot</li>
+          <li>📊 Branded UI + Analytics</li>
+          <li>📚 Up to 10 PDFs (RAG)</li>
+          <li>🔗 CRM, Google Sheets, Notion</li>
+          <li>❓ 3+ FAQ Buttons</li>
+          <li>📡 Subdomain Hosting</li>
+          <li>📱 Mobile Friendly</li>
+          <li>🛠️ 7-Day Support</li>
+          <li>🎥 Loom Setup + PDF Guide</li>
+        </ul>
+        <a href="https://gptgridx-premium.onrender.com/" class="btn">🚀 Try Demo</a>
+      </div>
+      <div class="description-box">
+        <h3>Enterprise AI That Sells</h3>
+        <p>Our Premium Plan is the complete solution for enterprise use. It combines powerful GPT-4 intelligence with secure hosting, lead capture systems, analytics, and CRM integrations. Ideal for scaling operations and improving user engagement across platforms.</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      Contact: <a href="mailto:gptgridx@gmail.com">gptgridx@gmail.com</a><br />
+      All bots are custom-built, secure, and fully owned by you.
+    </div>
+  </div>
+</body>
+</html>
